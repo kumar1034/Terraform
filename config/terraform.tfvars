@@ -1,6 +1,6 @@
 region = "us-east-1"
-access_key = "AKIASWBPTMJF4PGG2JP3"
-secret_key = "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"
+access_key = ""
+secret_key = ""
 
 vpc_config  = {
 
