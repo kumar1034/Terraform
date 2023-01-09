@@ -5,7 +5,8 @@ variable "elasticIP_config" {}
 variable "natGW_config" {}
 variable "route_table_config" {}
 variable "route_table_association_config" {}
-
+variable "aws_eks_cluster_config" {}
+variable "aws_eks_node_group_config" {}
 
 variable "region" {
   

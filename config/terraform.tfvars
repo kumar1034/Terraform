@@ -1,6 +1,6 @@
 region = "us-east-1"
-access_key = ""
-secret_key = ""
+access_key = "AKIASWBPTMJFYFTL2C4Z"
+secret_key = "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"
 
 vpc_config  = {
 
@@ -186,3 +186,54 @@ route_table_association_config = {
     }
 
 }
+
+
+aws_eks_cluster_config = {
+  
+  "project-key" = {
+    eks_cluster_name = "project-cluster"
+
+    subnet1 = "public-us-east-1a"
+    subnet2 = "public-us-east-1b"
+    subnet3 = "private-us-east-1a"
+    subnet4 = "private-us-east-1b"
+
+  tags = {
+    "Name" = "project-cluster"
+  }
+ }
+}
+
+aws_eks_node_group_config = {
+  
+  "node1_group" = {
+
+    node_group_name = "private_node_group1"
+    eks_cluster_name = "project-key"
+    node_iam_role = "eks-node-role-gen"
+    
+    subnet1 = "private-us-east-1a"
+    subnet2 = "private-us-east-1b"    
+
+    tags = {
+        "Name" = "node1_group"
+    }
+  }
+
+ "node2_group" = {
+
+    node_group_name = "private_node_group2"
+    eks_cluster_name = "project-key"
+    node_iam_role = "eks-node-role-gen"
+    
+    subnet1 = "private-us-east-1a"
+    subnet2 = "private-us-east-1b"    
+
+    tags = {
+        "Name" = "node2_group"
+    }
+  }
+
+
+}
+
