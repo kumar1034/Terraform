@@ -9,13 +9,13 @@ variable "aws_eks_cluster_config" {}
 variable "aws_eks_node_group_config" {}
 
 variable "region" {
-  
+
 }
 
 variable "access_key" {
-  
+
 }
 
 variable "secret_key" {
-  
+
 }
